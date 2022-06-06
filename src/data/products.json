@@ -1,0 +1,30 @@
+[
+  {
+    "id": "298ef0b2-3e2e-483c-87a7-ddfdf64d63d5",
+    "name": "Plain Ol' Pineapple",
+    "image": "pineapple-original.jpg",
+    "price": 4,
+    "inStock": 10
+  },
+  {
+    "id": "01ab693c-88ec-4bc5-b114-f519a6bfc033",
+    "name": "Dried Pineapple",
+    "image": "pineapple-dried.jpg",
+    "price": 5,
+    "inStock": 12
+  },
+  {
+    "id": "b74102c8-d50a-4fc9-9d9d-9f85e45851e2",
+    "name": "Pineapple Gum",
+    "image": "pineapple-gum.jpg",
+    "price": 3,
+    "inStock": 4
+  },
+  {
+    "id": "320f4f2a-50f0-4ef9-ad78-8df9834fd3a1",
+    "name": "Pineapple T-Shirt",
+    "image": "pineapple-tshirt.jpg",
+    "price": 12,
+    "inStock": 2
+  }
+]
