@@ -1,6 +1,6 @@
 # Pinia Workshop Boilerplate Code
 
-[State Management in Vue.js with Pinia](readme-screenshot.png)
+![State Management in Vue.js with Pinia](readme-screenshot.png)
 
 ### How to Use
 
