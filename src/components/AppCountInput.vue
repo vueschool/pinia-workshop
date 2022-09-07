@@ -10,7 +10,7 @@ const updateValue = (value) => emit("update:modelValue", value);
   <span>
     <button
       class="cursor-pointer bg-gray-200 px-2 rounded-l"
-      @click="updateValue(modelValue > 0 ? modelValue - 1 : null)"
+      @click="updateValue(modelValue > 0 ? modelValue - 1 : 0)"
     >
       -
     </button>
