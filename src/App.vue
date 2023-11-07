@@ -1,13 +1,11 @@
 <script setup>
-import TheHeader from "@/components/TheHeader.vue";
-import ProductCard from "@/components/ProductCard.vue";
 import products from "@/data/products.json";
 </script>
 
 <template>
   <div class="container">
     <TheHeader />
-    <ul class="sm:flex flex-wrap lg:flex-nowrap gap-5">
+    <ul class="flex-wrap gap-5 sm:flex lg:flex-nowrap">
       <ProductCard
         v-for="product in products"
         :key="product.id"
