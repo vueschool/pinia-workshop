@@ -2,6 +2,7 @@
   "extends": "@vue/tsconfig/tsconfig.web.json",
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "auto-imports.d.ts"],
   "compilerOptions": {
+    "module": "esnext",
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
