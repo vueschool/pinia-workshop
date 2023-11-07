@@ -2,6 +2,11 @@
 // imports
 import products from "@/data/products.json";
 import cartItems from "@/data/cart.json";
+import { useCartStore } from "@/stores/CartStore";
+import { useProductsStore } from "@/stores/ProductsStore";
+
+const cartStore = useCartStore();
+const productsStore = useProductsStore;
 
 // data
 const active = ref(false);

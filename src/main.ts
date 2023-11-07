@@ -2,6 +2,11 @@ import { createApp } from "vue";
 import App from "@/App.vue";
 import BoilerplatePlugin from "@/plugins/BoilerplatePlugin";
 import "@/assets/main.css";
+import { createPinia } from "pinia";
 
 // Init App
-createApp(App).use(BoilerplatePlugin).mount("#app");
+// prettier-ignore
+createApp(App)
+.use(createPinia())
+.use(BoilerplatePlugin)
+.mount("#app");
