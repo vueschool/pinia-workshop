@@ -1,6 +1,4 @@
 <script setup>
-import TheHeader from "@/components/TheHeader.vue";
-import ProductCard from "@/components/ProductCard.vue";
 import products from "@/data/products.json";
 import { useProductsStore } from "./stores/ProductsStore";
 
