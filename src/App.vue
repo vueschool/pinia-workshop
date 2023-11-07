@@ -1,8 +1,8 @@
 <script setup>
-import products from "@/data/products.json";
 import { useProductsStore } from "./stores/ProductsStore";
+import { storeToRefs } from "pinia";
 
-const productsStore = useProductsStore();
+const { products } = storeToRefs(useProductsStore());
 </script>
 
 <template>

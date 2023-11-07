@@ -1,12 +1,11 @@
 <script setup lang="ts">
 // imports
-import products from "@/data/products.json";
-import cartItems from "@/data/cart.json";
 import { useCartStore } from "@/stores/CartStore";
 import { useProductsStore } from "@/stores/ProductsStore";
+import { storeToRefs } from "pinia";
 
-const cartStore = useCartStore();
-const productsStore = useProductsStore;
+const { items: cartItems } = storeToRefs(useCartStore());
+const { products } = storeToRefs(useProductsStore());
 
 // data
 const active = ref(false);
