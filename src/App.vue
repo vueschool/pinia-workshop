@@ -6,18 +6,6 @@ import { useCartStore } from "@/stores/CartStore";
 const cartStore = useCartStore();
 const { addItem } = cartStore;
 
-//subscribing to state and actions BEGIN
-cartStore.$onAction(({ name, after }) => {
-  if (name !== "addItem") return;
-  after((count) => alert(`You've added ${count} items to the cart`));
-});
-cartStore.$subscribe((mutation, state) =>
-  localStorage.setItem("cartState", JSON.stringify(state))
-);
-const savedCart = localStorage.getItem("cartState");
-if (savedCart) cartStore.$state = JSON.parse(savedCart);
-//subscribing to state and actions END
-
 const productsStore = useProductsStore();
 const { products } = storeToRefs(productsStore);
 productsStore.fill();
@@ -26,6 +14,8 @@ productsStore.fill();
 <template>
   <div class="container">
     <TheHeader />
+    <AppButton @click="cartStore.undo">Undo</AppButton>
+    <AppButton @click="cartStore.redo">Redo</AppButton>
     <ul class="flex-wrap gap-5 sm:flex lg:flex-nowrap">
       <ProductCard
         v-for="product in products"
