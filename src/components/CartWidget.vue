@@ -4,7 +4,8 @@ import { useCartStore } from "@/stores/CartStore";
 import { useProductsStore } from "@/stores/ProductsStore";
 import { storeToRefs } from "pinia";
 
-const { items: cartItems, count, isEmpty, total } = storeToRefs(useCartStore());
+const cartStore = useCartStore();
+const { items: cartItems, count, isEmpty, total } = storeToRefs(cartStore);
 const { products } = storeToRefs(useProductsStore());
 
 // data
@@ -26,15 +27,20 @@ const active = ref(false);
             :key="item.id"
             :product="products.find((p) => item.id === p.id)"
             :count="item.count"
-            @updateCount=""
-            @clear=""
+            @updateCount="
+              item.count = $event;
+              item.count === 0 && cartStore.removeItem(item.id);
+            "
+            @clear="cartStore.removeItem(item.id)"
           />
         </ul>
         <div class="flex justify-end mb-5 text-2xl">
           Total: <strong>${{ total }}</strong>
         </div>
         <div class="flex justify-end">
-          <AppButton class="mr-2 secondary">Clear Cart</AppButton>
+          <AppButton class="mr-2 secondary" @click="cartStore.clear"
+            >Clear Cart</AppButton
+          >
           <AppButton class="primary">Checkout</AppButton>
         </div>
       </div>
