@@ -27,6 +27,7 @@ export const useCartStore = defineStore("CartStore", {
       } else {
         this.items.push({ id: itemId, count });
       }
+      return count;
     },
     removeItem(itemId: string) {
       this.items = this.items.filter((item) => item.id !== itemId);
