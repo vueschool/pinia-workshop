@@ -4,6 +4,7 @@
 
 1.  Download the Boilerplate Code
 2.  Ensure you're on Node v20.x.x (LTS)
+    1.  If you need to switch versions of node you can use [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
 3.  Go ahead and run npm install before conference so everyone isn't downloading dependencies at once
 4.  Get excited for the coming workshop!
 
