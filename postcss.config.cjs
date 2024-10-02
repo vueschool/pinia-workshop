@@ -1,5 +1,6 @@
+/*eslint-env node*/
 /** @type {import('postcss-load-config').Config} */
-export default {
+module.exports = {
   plugins: {
     tailwindcss: {},
     autoprefixer: {}
