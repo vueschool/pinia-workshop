@@ -1,19 +1,19 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    modelValue: number | string;
+    modelValue: number | string
   }>(),
   {
-    modelValue: 0,
+    modelValue: 0
   }
-);
+)
 
 const emit = defineEmits<{
-  "update:modelValue": [count: number];
-}>();
+  'update:modelValue': [count: number]
+}>()
 
 const updateValue = (value: number | string) =>
-  emit("update:modelValue", parseInt(value.toString()));
+  emit('update:modelValue', parseInt(value.toString()))
 </script>
 <template>
   <span>
@@ -49,11 +49,11 @@ const updateValue = (value: number | string) =>
 </template>
 
 <style scoped>
-input[type="number"] {
+input[type='number'] {
   appearance: none;
   -moz-appearance: textfield;
   border: 1px solid gray;
-  @apply border-gray-500 w-10 text-center;
+  @apply w-10 text-center border-gray-500;
 }
 button {
   border: 1px solid gray;
