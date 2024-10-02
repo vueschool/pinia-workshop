@@ -1,15 +1,15 @@
 <script setup lang="ts">
 // imports
-import products from "@/data/products.json";
-import cartItems from "@/data/cart.json";
-import { useCartStore } from "@/stores/CartStore";
-import { useProductsStore } from "@/stores/ProductsStore";
+import products from '@/data/products.json'
+import cartItems from '@/data/cart.json'
+import { useCartStore } from '@/stores/CartStore'
+import { useProductsStore } from '@/stores/ProductsStore'
 
-const cartStore = useCartStore();
-const productsStore = useProductsStore;
+const cartStore = useCartStore()
+const productsStore = useProductsStore()
 
 // data
-const active = ref(false);
+const active = ref(false)
 </script>
 <template>
   <div class="relative">
@@ -25,7 +25,7 @@ const active = ref(false);
           <CartItem
             v-for="item in cartItems"
             :key="item.id"
-            :product="products.find((p) => item.id === p.id)"
+            :product="products.find((p) => item.id === p.id)!"
             :count="item.count"
             @updateCount=""
             @clear=""
@@ -45,13 +45,13 @@ const active = ref(false);
   </div>
 </template>
 <style lang="pcss" scoped>
-.items-in-cart{
+.items-in-cart {
   @apply mb-5;
 }
-.items-in-cart li{
+.items-in-cart li {
   @apply flex justify-between p-2;
 }
-.items-in-cart li:nth-of-type(even){
+.items-in-cart li:nth-of-type(even) {
   @apply bg-gray-300;
 }
 </style>

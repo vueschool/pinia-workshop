@@ -1,8 +1,8 @@
 <script setup>
-import products from "@/data/products.json";
-import { useProductsStore } from "./stores/ProductsStore";
+import products from '@/data/products.json'
+import { useProductsStore } from './stores/ProductsStore'
 
-const productsStore = useProductsStore();
+const productsStore = useProductsStore()
 </script>
 
 <template>
