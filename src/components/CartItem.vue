@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { Product } from "@/types";
+import type { Product } from '@/types'
 defineProps<{
-  product: Product;
-  count: number;
-}>();
+  product: Product
+  count: number
+}>()
 
 defineEmits<{
-  updateCount: [count: number];
-  clear: [clear: void];
-}>();
+  updateCount: [count: number]
+  clear: [clear: void]
+}>()
 </script>
 <template>
   <li>
