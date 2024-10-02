@@ -1,9 +1,9 @@
-import { defineStore, acceptHMRUpdate } from "pinia";
-import type { Product } from "@/types";
+import { defineStore, acceptHMRUpdate } from 'pinia'
+import type { Product } from '@/types'
 
-export const useProductsStore = defineStore("ProductsStore", {
+export const useProductsStore = defineStore('ProductsStore', {
   state: () => ({
-    products: [] as Product[],
+    products: [] as Product[]
   }),
   getters: {
     productById(state) {
@@ -14,12 +14,12 @@ export const useProductsStore = defineStore("ProductsStore", {
   },
   actions: {
     async fill() {
-      const res = await fetch("/products.json");
-      this.products = await res.json();
-    },
-  },
-});
+      const res = await fetch('/products.json')
+      this.products = await res.json()
+    }
+  }
+})
 
 if (import.meta.hot) {
-  import.meta.hot.accept(acceptHMRUpdate(useProductsStore, import.meta.hot));
+  import.meta.hot.accept(acceptHMRUpdate(useProductsStore, import.meta.hot))
 }
