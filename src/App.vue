@@ -1,8 +1,8 @@
 <script setup>
-import { useProductsStore } from "./stores/ProductsStore";
-import { storeToRefs } from "pinia";
+import { useProductsStore } from './stores/ProductsStore'
+import { storeToRefs } from 'pinia'
 
-const { products } = storeToRefs(useProductsStore());
+const { products } = storeToRefs(useProductsStore())
 </script>
 
 <template>
