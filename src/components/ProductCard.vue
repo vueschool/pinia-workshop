@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { Product } from "@/types";
+import type { Product } from '@/types'
 
 defineProps<{
-  product: Product;
-}>();
+  product: Product
+}>()
 
 defineEmits<{
-  addToCart: [count: number];
-}>();
+  addToCart: [count: number]
+}>()
 
 // data
-const count = ref(0);
+const count = ref(0)
 </script>
 <template>
   <li class="card">

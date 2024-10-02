@@ -1,9 +1,9 @@
 <script setup lang="ts">
 defineProps<{
-  active: boolean;
-}>();
+  active: boolean
+}>()
 
-defineEmits(["close"]);
+defineEmits(['close'])
 </script>
 <template>
   <div v-if="active" class="modal-overlay">
@@ -18,21 +18,21 @@ defineEmits(["close"]);
 </template>
 
 <style lang="pcss" scoped>
-.close{
+.close {
   @apply absolute top-2 right-2;
 }
-.modal-overlay-bg{
-  @apply fixed top-0 left-0 right-0 bottom-0 bg-gray-900 opacity-80;
+.modal-overlay-bg {
+  @apply fixed top-0 bottom-0 left-0 right-0 bg-gray-900 opacity-80;
 }
-.modal-overlay-content{
-  @apply fixed bg-white p-10 w-4/5 rounded;
+.modal-overlay-content {
+  @apply fixed w-4/5 p-10 bg-white rounded;
   top: 50%;
-  left:50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
-@media (min-width: 800px){
-  .modal-overlay-content{
-    width:600px !important;
+@media (min-width: 800px) {
+  .modal-overlay-content {
+    width: 600px !important;
   }
 }
 </style>
