@@ -26,6 +26,7 @@ export default defineConfig({
         /\.md$/, // .md
       ],
       dts: true,
+      viteOptimizeDeps: true,
     }),
   ],
   resolve: {
