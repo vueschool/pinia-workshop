@@ -28,8 +28,8 @@ const active = ref(false)
             :product="products.find((p) => item.id === p.id)!"
             :count="item.count"
             @updateCount="
-              item.count = $event
-              item.count === 0 && cartStore.removeItem(item.id)
+              (item.count = $event),
+                item.count === 0 && cartStore.removeItem(item.id)
             "
             @clear="cartStore.removeItem(item.id)"
           />
