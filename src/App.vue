@@ -1,13 +1,13 @@
 <script setup>
-import { useProductsStore } from "./stores/ProductsStore";
-import { storeToRefs } from "pinia";
-import { useCartStore } from "@/stores/CartStore";
+import { useProductsStore } from './stores/ProductsStore'
+import { storeToRefs } from 'pinia'
+import { useCartStore } from '@/stores/CartStore'
 
-const { addItem } = useCartStore();
+const { addItem } = useCartStore()
 
-const productsStore = useProductsStore();
-const { products } = storeToRefs(productsStore);
-productsStore.fill();
+const productsStore = useProductsStore()
+const { products } = storeToRefs(productsStore)
+productsStore.fill()
 </script>
 
 <template>
